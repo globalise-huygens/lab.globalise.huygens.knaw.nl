@@ -3,6 +3,7 @@
 **Date:** October 4, 2023  
 **URL:** https://transcriptions.globalise.huygens.knaw.nl/  
 **Status:** Prototype  
+**People involved:** Sebastiaan van Daalen, Hayco de Jong, Bram Buitendijk, Hennie Brugman, Arno Bosse, Leon van Wissen, Lodewijk Petram
 
 The aim of the GLOBALISE project is to facilitate research with the _Overgekomen Brieven en Papieren_ series of documents from the VOC archives. As a first step to reaching this goal, we generate transcriptions of the c. 5 million of handwritten pages made available by the Dutch National Archives using [automatic transcription software](https://github.com/knaw-huc/loghi). 
 

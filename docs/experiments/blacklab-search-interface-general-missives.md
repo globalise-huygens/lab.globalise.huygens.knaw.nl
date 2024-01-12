@@ -1,4 +1,4 @@
-# BlackLab Search Interfacte for the General Missives of the VOC
+# BlackLab Search Interface for the General Missives of the VOC
 
 **Date:** 2021 (pre-GLOBALISE)  
 **URL:** https://corpora.ato.ivdnt.org/corpus-frontend/Missiven/search  

@@ -1,4 +1,4 @@
-# Text Fabric representation of the General Missives of the VOC
+# Text Fabric Serialization of the General Missives of the VOC
 
 **Date:** 2022 (pre-GLOBALISE)  
 **URL:** https://clariah.github.io/wp6-missieven-search/text/index.html and https://github.com/CLARIAH/wp6-missieven/   

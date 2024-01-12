@@ -19,10 +19,12 @@ nav:
   - Home: index.md
   #- About: about.md
   - "Ongoing experiments":
-      - "Transcriptions viewer": experiments/htr-viewer.md
-      - "Places visualization": experiments/places-visualization.md
-  # - "Completed experiments":
-  #     - "Word Embeddings": experiments/word-embeddings.md
+      - "Transcriptions Viewer": experiments/htr-viewer.md
+      - "Places Visualization": experiments/places-visualization.md
+  - "Completed experiments":
+      - "General Missives Search Interface": experiments/blacklab-search-interface-general-missives.md
+      - "Text-Fabric Serialization of General Missives": experiments/text-fabric-general-missives.md
+  #    - "Word Embeddings": experiments/word-embeddings.md
 markdown_extensions:
   - toc:
       permalink: True
