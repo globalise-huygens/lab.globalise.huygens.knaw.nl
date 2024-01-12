@@ -2,7 +2,7 @@
 
 **Date:** 2022 (pre-GLOBALISE)  
 **URL:** https://clariah.github.io/wp6-missieven-search/text/index.html and https://github.com/CLARIAH/wp6-missieven/   
-**Status:** Production  
+**Status:** Demo  
 **People involved:** Dirk Roorda, Sophie Arnoult, Lodewijk Petram, Piek Vossen, Jesse de Does, Jessica den Oudsten, Daniël Tuik
 
 A Text-Fabric representation of the _General Missives_ of the Dutch East India Company (VOC) offers a new way to explore and analyze these reports. The _General Missives_ sent from Batavia (Jakarta) to the Dutch Republic between 1610 and 1795, are now accessible for in-depth research thanks to efforts within the [CLARIAH project](https://www.clariah.nl/) by a team from [VU University](https://vu.nl/), the [Huygens Institute](https://www.huygens.knaw.nl/), and the [Dutch Language Institute](https://ivdnt.org/). Utilizing advanced OCR and Named Entity Recognition techniques [^1], the team enhanced these documents with metadata and structural elements, including annotations for entities like persons and locations.
@@ -16,4 +16,4 @@ The _General Missives_ summarize the information contained in the _Overgekomen B
 
 Please note that the General Missives contain labels, characterizations and information about persons, actions and events that may be offensive and troubling to individuals and communities.
 
-[^1] Sophie I. Arnoult, Lodewijk Petram, and Piek Vossen. 2021. Batavia asked for advice. Pretrained language models for Named Entity Recognition in historical texts. In _Proceedings of the 5th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature_, pages 21–30, Punta Cana, Dominican Republic (online). Association for Computational Linguistics. https://doi.org/10.18653/v1/2021.latechclfl-1.3
+[^1]: Sophie I. Arnoult, Lodewijk Petram, and Piek Vossen. 2021. Batavia asked for advice. Pretrained language models for Named Entity Recognition in historical texts. In _Proceedings of the 5th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature_, pages 21–30, Punta Cana, Dominican Republic (online). Association for Computational Linguistics. https://doi.org/10.18653/v1/2021.latechclfl-1.3
