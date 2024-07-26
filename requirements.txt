@@ -2,3 +2,4 @@ mkdocs-material
 plantuml-markdown
 mkdocs-git-revision-date-localized-plugin
 mkdocs-mermaid2-plugin
+mkdocs-jupyter

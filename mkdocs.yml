@@ -21,6 +21,7 @@ nav:
   - "Ongoing experiments":
       - "Transcriptions Viewer": experiments/htr-viewer.md
       - "Places Visualization": experiments/places-visualization.md
+      - "Word Embeddings": experiments/GLOBALISE_Word2Vec_Lab.ipynb
   - "Completed experiments":
       - "General Missives Search Interface": experiments/blacklab-search-interface-general-missives.md
       - "Text-Fabric Serialization of General Missives": experiments/text-fabric-general-missives.md
@@ -38,6 +39,7 @@ markdown_extensions:
 plugins:
   - search # necessary for search to work
   - git-revision-date-localized
+  - mkdocs-jupyter
 extra_css:
   - stylesheets/extra.css
 extra:
