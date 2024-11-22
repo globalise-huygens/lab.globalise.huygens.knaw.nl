@@ -22,7 +22,7 @@
     
     
       
-        <title>Word2Vec Experiment - GLOBALISE Lab</title>
+        <title>Word2Vec Model - GLOBALISE Lab</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#word2vec-experiment" class="md-skip">
+        <a href="#word2vec-model" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Word2Vec Experiment
+              Word2Vec Model
             
           </span>
         </div>
@@ -336,7 +336,7 @@
           
   
   <span class="md-ellipsis">
-    Word2Vec Experiment
+    Word2Vec Model
   </span>
   
 
@@ -347,7 +347,7 @@
         
   
   <span class="md-ellipsis">
-    Word2Vec Experiment
+    Word2Vec Model
   </span>
   
 
@@ -1162,7 +1162,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="word2vec-experiment">Word2Vec Experiment<a class="anchor-link" href="#word2vec-experiment">¶</a></h1>
+<h1 id="word2vec-model">Word2Vec Model<a class="anchor-link" href="#word2vec-model">¶</a></h1>
 </div>
 </div>
 </div>
@@ -1173,7 +1173,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="introduction">Introduction<a class="anchor-link" href="#introduction">¶</a></h2><p>We trained a Word2Vec model on the GLOBALISE Transcriptions (v2, generated in September 2023). This is a machine learning model that generates vector representations of words based on their context. By leveraging this model you can:</p>
+<h2 id="introduction">Introduction<a class="anchor-link" href="#introduction">¶</a></h2><p>We trained a Word2Vec model on the GLOBALISE Transcriptions, creating vector representations of words based on their context. By leveraging this model you can:</p>
 <ol>
 <li><strong>Find Spelling Variants and Synonyms</strong>: Discover alternative spellings or synonyms of a word by identifying those with similar vector representations. This is particularly useful for early modern texts with inconsistent orthography.</li>
 <li><strong>Contextual Similarity</strong>: Locate words that frequently appear in similar contexts, shedding light on semantic relationships. For instance, the term <code>plantage</code> (plantation) might reveal associations with specific crops or geographic regions.</li>
@@ -1329,53 +1329,10 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"amsterdam"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mf">0.4</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-3">for i, p in w2v.most_similar("amsterdam", topn=100):
-    if p &gt;= 0.4:
-        print(i, end=" ")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>sterdam middelburg amsterd amst zeeland amster amsterdm amstm rotterdam delft amsteldam enkhuijsen zeland middelburgh utrecht ams amsterda amste gravenhage terdam zeelant zeiland derwapen enchuijsen dam delff maddelburg middelb enckhuijsen amstedam enkhuijzen aamsterdam delfft presidiale enkhuisen seeland enckhuijzen geredreseert vlissingen rdam praesidiale amsterdan hage costeux zeelandt wappan hoorn rotterdant delburg delf delst behangsels inzeland middelbrerg enkhuizen proefidiaale praecidiale ceulen boodh caamer enckhuijs dewees behanghsel amsterstam temiddelburg enkhuysen zieland alkmaar meddelburg cognoissemet rotter sdh carode uijtgevaren middelburgin kameer delvt leijden zeel praesideale amstd uijtregt utregt hoplooper enchuy terkamer rabbinel vlissinge diale kaner veere arnhem confernee praesidiaale haarlem kamier enehuysen siemermeer middeburg amstdam </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"intje"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">for i in w2v.most_similar("intje", topn=100):
+<div class="clipboard-copy-txt" id="cell-3">for i in w2v.most_similar("intje", topn=100):
     print(i[0], end=" | ")</div>
 </div>
 </div>
@@ -1400,10 +1357,10 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1416,7 +1373,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"caneel"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">for i in w2v.most_similar("caneel", topn=100):
+<div class="clipboard-copy-txt" id="cell-4">for i in w2v.most_similar("caneel", topn=100):
     print(i[0], end=" | ")</div>
 </div>
 </div>
@@ -1430,6 +1387,60 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>canneel | arreecq | arreeck | cardamom | geschilden | balen | cardaman | cardamon | areecq | arreek | geschilt | overjarigen | areek | geschilde | ruijnas | bast | kurkuma | wortelen | wortel | cardemom | cannel | saffragamse | arreeq | groven | jndigo | incorrecte | ammenams | schelders | plantjes | curcuma | areeck | ougsten | affpacken | zaije | runas | schillens | moernagelen | cauwa | wortels | smakeloose | koehuijden | klenen | indigo | gekookten | zalpeter | canneer | saije | calpentijnsen | cragtelose | endeneese | canneelschilders | cheijlonsen | kannee | reuck | baelen | baalen | kanneel | pingos | sacken | varssen | anijl | ruinas | ammonams | tabacq | zaat | cauris | amm | ruias | cardanom | fijnen | cardamam | coffijbonen | cardamoin | arreck | bhaalen | zaijen | nagelen | caneell | embaleeren | bladeren | berberijen | coffijboonen | overjarige | kleenen | fordeelen | zaad | onrijpe | noten | pken | specerije | gamsen | geschild | caaneel | roggevellen | endeneesche | ingesamelden | oliteiten | peerlen | pepen | elijhanten | </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The cell below finds the 100 most similar words to "Amsterdam" that have a similarity score of 0.4 or higher.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"amsterdam"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mf">0.4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5">for i, p in w2v.most_similar("amsterdam", topn=100):
+    if p &gt;= 0.4:
+        print(i, end=" | ")</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>sterdam | middelburg | amsterd | amst | zeeland | amster | amsterdm | amstm | rotterdam | delft | amsteldam | enkhuijsen | zeland | middelburgh | utrecht | ams | amsterda | amste | gravenhage | terdam | zeelant | zeiland | derwapen | enchuijsen | dam | delff | maddelburg | middelb | enckhuijsen | amstedam | enkhuijzen | aamsterdam | delfft | presidiale | enkhuisen | seeland | enckhuijzen | geredreseert | vlissingen | rdam | praesidiale | amsterdan | hage | costeux | zeelandt | wappan | hoorn | rotterdant | delburg | delf | delst | behangsels | inzeland | middelbrerg | enkhuizen | proefidiaale | praecidiale | ceulen | boodh | caamer | enckhuijs | dewees | behanghsel | amsterstam | temiddelburg | enkhuysen | zieland | alkmaar | meddelburg | cognoissemet | rotter | sdh | carode | uijtgevaren | middelburgin | kameer | delvt | leijden | zeel | praesideale | amstd | uijtregt | utregt | hoplooper | enchuy | terkamer | rabbinel | vlissinge | diale | kaner | veere | arnhem | confernee | praesidiaale | haarlem | kamier | enehuysen | siemermeer | middeburg | amstdam | </pre>
 </div>
 </div>
 </div>
@@ -1498,7 +1509,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ships in the Dutch East India Company (VOC) fleet were often named after places, such as cities. The following cell uses the <code>closer_than</code> function to find all words in the Word2Vec model’s vocabulary whose vector representations are closer to a specified word ("eendracht", here meant as the name of a ship) than to another word ("tilburg", in this example meant as the name of a place) in terms of cosine similarity. This helps to identify words that share a stronger contextual association with "eendracht" (ship) compared to "tilburg" (place) and thus ideally filter out terms referring to places, yielding a list of potential ship names, or at least words that are more likely to be associated with ships.</p>
+<p>Ships in the Dutch East India Company (VOC) fleet were often named after places. The following cell uses the <code>closer_than</code> function to find all words in the Word2Vec model’s vocabulary whose vector representations are closer to a specified word ("eendracht", here meant as the name of a ship) than to another word ("tilburg", in this example meant as the name of a place) in terms of cosine similarity. This helps to identify words that share a stronger contextual association with "eendracht" (ship) compared to "tilburg" (place) and thus ideally filter out terms referring to places, yielding a list of potential ship names, or at least words that are more likely to be associated with ships.</p>
 </div>
 </div>
 </div>
@@ -1521,9 +1532,17 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">closer_than</span><span class="p">(</span><span class="s2">"eendracht"</span><span class="p">,</span> <span class="s2">"tilburg"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">w2v</span><span class="o">.</span><span class="n">closer_than</span><span class="p">(</span><span class="s2">"eendracht"</span><span class="p">,</span> <span class="s2">"tilburg"</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="s2">" | "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">[:</span><span class="mi">100</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">w2v.closer_than("eendracht", "tilburg")</div>
+<div class="clipboard-copy-txt" id="cell-7">words = w2v.closer_than("eendracht", "tilburg")
+
+output = " | ".join(words[:100])
+
+print(output)</div>
 </div>
 </div>
 </div>
@@ -1532,1010 +1551,11 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['ende',
- 'naer',
- 'oock',
- 'noch',
- 'int',
- 'nae',
- 'schepen',
- 'retour',
- 'vant',
- 'camer',
- 'gecomen',
- 'fluijt',
- 'volck',
- 'becomen',
- 'welck',
- 'jacht',
- 'hoorn',
- 'japan',
- 'rotterdam',
- 'coninck',
- 'ditto',
- 'jagt',
- 'wint',
- 'compe',
- 'godt',
- 'lant',
- 'eijlanden',
- 'derwaerts',
- 'end',
- 'vertreck',
- 'landt',
- 'goa',
- 'geladen',
- 'stadt',
- 'tschip',
- 'bat',
- 'comende',
- 'maent',
- 'opt',
- 'chaloup',
- 'maecken',
- 'ladinge',
- 'japara',
- 'delft',
- 'oocq',
- 'gearriveert',
- 'genaemt',
- 'gemaeckt',
- 'weijnich',
- 'coningh',
- 'rhede',
- 'langh',
- 'waermede',
- 'daermede',
- 'ene',
- 'macht',
- 'ancker',
- 'originele',
- 'jnt',
- 'eijlant',
- 'nassauw',
- 'augustij',
- 'vrede',
- 'quartieren',
- 'wapen',
- 'voijagie',
- 'cattij',
- 'middagh',
- 'achter',
- 'opde',
- 'vaderlant',
- 'portugees',
- 'geseijde',
- 'leeuw',
- 'dirck',
- 'cargasoen',
- 'verwachten',
- 'mauritius',
- 'rijck',
- 'chialoep',
- 'dach',
- 'namentlijck',
- 'eijlandt',
- 'geladene',
- 'vlissingen',
- 'jachten',
- 'battavia',
- 'gelyck',
- 'seecker',
- 'wingurla',
- 'gescheept',
- 'amst',
- 'portugesen',
- 'iapan',
- 'comste',
- 'stondt',
- 'nederlants',
- 'arent',
- 'nacht',
- 'vercocht',
- 'haven',
- 'zielen',
- 'caap',
- 'gedestineert',
- 'goens',
- 'fregat',
- 'vaert',
- 'oosten',
- 'galjoot',
- 'iagt',
- 'bouton',
- 'admirael',
- 'baij',
- 'aengecomen',
- 'eenich',
- 'orangie',
- 'besendinge',
- 'nde',
- 'batt',
- 'joncken',
- 'toecomende',
- 'journael',
- 'fortuijn',
- 'conincx',
- 'volladen',
- 'enkhuijsen',
- 'gevaren',
- 'amsterd',
- 'engeland',
- 'diemen',
- 'japanse',
- 'suratte',
- 'texel',
- 'souratte',
- 'vaeren',
- 'moluccos',
- 'hooch',
- 'cleen',
- 'vandaer',
- 'vaertuijgh',
- 'aent',
- 'noorden',
- 'vloote',
- 'windt',
- 'loo',
- 'noort',
- 'havenen',
- 'jager',
- 'jans',
- 'ganges',
- 'gedestineerde',
- 'jagtje',
- 'mallacca',
- 'westen',
- 'reyse',
- 'twelcke',
- 'helena',
- 'claes',
- 'swarten',
- 'sumatra',
- 'suijcker',
- 'speelman',
- 'datmen',
- 'concordia',
- 'lam',
- 'burgh',
- 'bon',
- 'geseijlt',
- 'geseijt',
- 'wech',
- 'ouer',
- 'wacht',
- 'princes',
- 'vijant',
- 'uijren',
- 'vertreckt',
- 'lanck',
- 'vaderlandt',
- 'sunda',
- 'suratta',
- 'koninck',
- 'dittos',
- 'naderhant',
- 'mette',
- 'spiegel',
- 'eendragt',
- 'welvaren',
- 'graden',
- 'metten',
- 'wester',
- 'cleijn',
- 'oorloge',
- 'hollandia',
- 'avondt',
- 'mars',
- 'chaloupen',
- 'queda',
- 'hoecker',
- 'engelsz',
- 'malcanderen',
- 'maen',
- 'ternate',
- 'lichten',
- 'eenighe',
- 'velsen',
- 'boeckhouder',
- 'hoeck',
- 'soodanich',
- 'eenelijck',
- 'aer',
- 'vijandt',
- 'fluijten',
- 'toegecomen',
- 'leijt',
- 'becoomen',
- 'pauw',
- 'pallas',
- 'stierman',
- 'seijlen',
- 'jaght',
- 'bengala',
- 'beer',
- 'gelicht',
- 'seijl',
- 'zuijt',
- 'nangasackij',
- 'lants',
- 'nederlantse',
- 'eijndelijck',
- 'anthonio',
- 'jonck',
- 'facture',
- 'anckers',
- 'monterende',
- 'esperance',
- 'schagen',
- 'jegenwoordich',
- 'opperhooffden',
- 'monteert',
- 'geprojecteert',
- 'eylanden',
- 'taijouan',
- 'persien',
- 'aengebracht',
- 'brant',
- 'macquian',
- 'straet',
- 'schep',
- 'ladingh',
- 'portugese',
- 'ouglij',
- 'alreede',
- 'lis',
- 'insgelijcx',
- 'maes',
- 'besettinge',
- 'macao',
- 'haas',
- 'geraeckt',
- 'fluijtje',
- 'caep',
- 'zeelandia',
- 'gemaect',
- 'joris',
- 'twelcq',
- 'selvige',
- 'spoedigh',
- 'doort',
- 'zeelant',
- 'nassau',
- 'retourneren',
- 'overgecomen',
- 'oorsaecke',
- 'bantham',
- 'middach',
- 'nodich',
- 'rechte',
- 'naert',
- 'martij',
- 'costi',
- 'welcq',
- 'overnes',
- 'voorss',
- 'waert',
- 'maendt',
- 'siams',
- 'verrichten',
- 'cauw',
- 'middelburgh',
- 'sillida',
- 'snoek',
- 'tidoor',
- 'brugge',
- 'zeijlende',
- 'voornt',
- 'ouwerkerk',
- 'naervolgende',
- 'conincq',
- 'aenstonts',
- 'wederomme',
- 'elck',
- 'gesecht',
- 'fredrick',
- 'cast',
- 'volcht',
- 'diamant',
- 'jaerlijcx',
- 'dieren',
- 'mouson',
- 'compste',
- 'opden',
- 'genoech',
- 'batavier',
- 'vaertuijch',
- 'geraecken',
- 'middelb',
- 'reste',
- 'chial',
- 'reviere',
- 'adrichem',
- 'castricum',
- 'tegenwoordich',
- 'vracht',
- 'margaretha',
- 'overschie',
- 'damme',
- 'spijk',
- 'grave',
- 'horst',
- 'dicht',
- 'biema',
- 'engelant',
- 'terstont',
- 'jagten',
- 'doornik',
- 'tocht',
- 'gecocht',
- 'siecken',
- 'lagh',
- 'amboijna',
- 'redelijck',
- 'nieuwland',
- 'verovert',
- 'arriveren',
- 'capelle',
- 'verwacht',
- 'gecregen',
- 'cargasoenen',
- 'houdt',
- 'scheepie',
- 'raap',
- 'ooc',
- 'hillegonda',
- 'overgescheept',
- 'onderwegen',
- 'hollantse',
- 'voorder',
- 'nassouw',
- 'vruchten',
- 'brandt',
- 'oma',
- 'westhoven',
- 'ongeluck',
- 'spiering',
- 'sijmon',
- 'goes',
- 'fluijtschip',
- 'selue',
- 'reij',
- 'geankert',
- 'bort',
- 'hercules',
- 'verbij',
- 'hoet',
- 'gelijcq',
- 'gezeijlt',
- 'gesamentlijck',
- 'vrijburg',
- 'manilha',
- 'havens',
- 'thoff',
- 'oudt',
- 'naderhandt',
- 'negombo',
- 'walcheren',
- 'opperdoes',
- 'breda',
- 'pegu',
- 'solor',
- 'joncke',
- 'mallebaer',
- 'chiampan',
- 'voorspoet',
- 'redout',
- 'naerde',
- 'batavise',
- 'boa',
- 'jappan',
- 'briel',
- 'abbekerk',
- 'sont',
- 'tijdingh',
- 'weynich',
- 'geseth',
- 'meijnden',
- 'vliegende',
- 'woerden',
- 'vaderlantse',
- 'genaempt',
- 'wilhem',
- 'achteren',
- 'paliacatta',
- 'steecken',
- 'alst',
- 'boero',
- 'zeelandt',
- 'langewijk',
- 'riviere',
- 'formosa',
- 'adelborst',
- 'mettet',
- 'mett',
- 'caron',
- 'leck',
- 'tjagt',
- 'ano',
- 'snauw',
- 'broeck',
- 'tjacht',
- 'erasmus',
- 'manilhas',
- 'witten',
- 'beverwijk',
- 'utrecht',
- 'quaemen',
- 'gouda',
- 'cats',
- 'atchin',
- 'ingeladen',
- 'enckhuijsen',
- 'verricht',
- 'coen',
- 'vlaming',
- 'claesz',
- 'larique',
- 'brandenburg',
- 'grondt',
- 'molucco',
- 'aendoen',
- 'come',
- 'duijnen',
- 'vuijt',
- 'armade',
- 'iacoba',
- 'boucken',
- 'firando',
- 'moij',
- 'unie',
- 'dolphijn',
- 'daerse',
- 'foreest',
- 'kat',
- 'thof',
- 'joncq',
- 'geruchten',
- 'haen',
- 'cha',
- 'flora',
- 'amb',
- 'spoedich',
- 'keulen',
- 'saterdagh',
- 'janssen',
- 'campen',
- 'aencomste',
- 'vaerwater',
- 'date',
- 'standt',
- 'haerlem',
- 'fluyt',
- 'chaloep',
- 'jaccatra',
- 'dienstich',
- 'bassora',
- 'veroverde',
- 'deense',
- 'aenboort',
- 'castel',
- 'baije',
- 'assenburg',
- 'reeckeninge',
- 'buuren',
- 'hoochte',
- 'paert',
- 'besendingh',
- 'bellasoor',
- 'hurdt',
- 'africa',
- 'engelandt',
- 'barentsz',
- 'drije',
- 'gemant',
- 'victorie',
- 'coeverden',
- 'gescheepte',
- 'etmael',
- 'borsselen',
- 'baeij',
- 'samson',
- 'inlants',
- 'zunda',
- 'besuijden',
- 'nieuwerkerk',
- 'valck',
- 'blijdorp',
- 'chialoepen',
- 'eten',
- 'redelijcke',
- 'mitsgaeders',
- 'delfs',
- 'oosthuijsen',
- 'sulckx',
- 'henrick',
- 'westerbeek',
- 'brugh',
- 'nas',
- 'tland',
- 'vaem',
- 'riff',
- 'antonio',
- 'hollant',
- 'nederlantsche',
- 'schulp',
- 'cruijs',
- 'verongelucken',
- 'wassenaar',
- 'londen',
- 'nachts',
- 'beschermer',
- 'geraackt',
- 'outshoorn',
- 'maendagh',
- 'wercq',
- 'nederlant',
- 'opperstierman',
- 'rijckloff',
- 'gecombineert',
- 'aengeweest',
- 'naght',
- 'voorburg',
- 'strandt',
- 'waveren',
- 'reduijt',
- 'cregen',
- 'noordbeek',
- 'draak',
- 'jaques',
- 'suijder',
- 'ellemeet',
- 'nova',
- 'nuijts',
- 'gelaeden',
- 'pool',
- 'besoecken',
- 'vosmaar',
- 'castor',
- 'retourneert',
- 'oct',
- 'schepe',
- 'comptanten',
- 'herstelde',
- 'onderzeijl',
- 'wickenburg',
- 'popkensburg',
- 'oorloch',
- 'steenhoven',
- 'vlamingh',
- 'bonne',
- 'seijnden',
- 'werwaerts',
- 'straalen',
- 'bijt',
- 'theodora',
- 'kercke',
- 'hogersmilde',
- 'tanjongpoura',
- 'datelijck',
- 'terra',
- 'iager',
- 'derwarts',
- 'dto',
- 'rotterd',
- 'aengeland',
- 'cijlon',
- 'soot',
- 'gideon',
- 'gevolcht',
- 'vertrocke',
- 'samarangh',
- 'hoedanich',
- 'gestevent',
- 'hollandt',
- 'herwarts',
- 'meerman',
- 'wesel',
- 'alphen',
- 'raeckende',
- 'iacht',
- 'twapen',
- 'alsvooren',
- 'parsia',
- 'ledigh',
- 'amstel',
- 'enchuijsen',
- 'masulipatam',
- 'rosingijn',
- 'vane',
- 'vestinge',
- 'papenburg',
- 'ontladen',
- 'valkenisse',
- 'reeckeningh',
- 'voorgemelte',
- 'tarnaten',
- 'gangh',
- 'laeden',
- 'hoochsten',
- 'ock',
- 'breecken',
- 'robbertus',
- 'booth',
- 'peerl',
- 'gouw',
- 'eylant',
- 'schelde',
- 'langhs',
- 'boordt',
- 'wendela',
- 'eenhoorn',
- 'voorland',
- 'faam',
- 'visvliet',
- 'beoosten',
- 'iagtje',
- 'salm',
- 'clachten',
- 'gevaeren',
- 'perijckel',
- 'redel',
- 'naet',
- 'seijlon',
- 'alsem',
- 'bocht',
- 'besich',
- 'leyden',
- 'groeningen',
- 'haerder',
- 'carthago',
- 'vruchteloos',
- 'maleijo',
- 'block',
- 'hardt',
- 'rhoon',
- 'wijck',
- 'genoechsaem',
- 'oostrust',
- 'waerdich',
- 'pollux',
- 'verseeckeringe',
- 'gesicht',
- 'mane',
- 'aancomste',
- 'geduijrende',
- 'besettingh',
- 'portugael',
- 'passerende',
- 'raadhuijs',
- 'rijcke',
- 'cargo',
- 'vertrecq',
- 'lampon',
- 'scholtenburg',
- 'palimbangh',
- 'deensche',
- 'amerongen',
- 'veroorsaeckt',
- 'enge',
- 'bogaart',
- 'choromandel',
- 'chirrebon',
- 'delff',
- 'bijweg',
- 'landskroon',
- 'alsnoch',
- 'bevindingh',
- 'menichte',
- 'sint',
- 'beseth',
- 'vijants',
- 'ridderkerk',
- 'westerveld',
- 'schiedam',
- 'beekvliet',
- 'comptant',
- 'padmos',
- 'retourneerende',
- 'naart',
- 'geseijden',
- 'aencomende',
- 'nederlandt',
- 'aden',
- 'becommen',
- 'maccauw',
- 'byden',
- 'crab',
- 'cronenburg',
- 'aenkomste',
- 'vlucht',
- 'eylandt',
- 'haes',
- 'waerden',
- 'purmer',
- 'correcorren',
- 'tack',
- 'majt',
- 'alsnu',
- 'verseijlt',
- 'zuratta',
- 'slach',
- 'scheepken',
- 'strijen',
- 'middelwout',
- 'verwachtende',
- 'zeepaard',
- 'brachten',
- 'beijeren',
- 'dregterland',
- 'geertruij',
- 'casar',
- 'javan',
- 'ceres',
- 'aencomen',
- 'hendricksz',
- 'tpatria',
- 'snachts',
- 'gevolght',
- 'ida',
- 'eijl',
- 'jonghst',
- 'triton',
- 'mandorijn',
- 'voorwaer',
- 'ome',
- 'corts',
- 'spaens',
- 'meerlust',
- 'dircksz',
- 'merwe',
- 'voorschooten',
- 'patanij',
- 'hogenes',
- 'borneo',
- 'eem',
- 'vertimmeren',
- 'vlote',
- 'nederhoven',
- 'rosenburg',
- 'jnlants',
- 'oranje',
- 'fregatten',
- 'ria',
- 'naerden',
- 'maldives',
- 'beveland',
- 'bodt',
- 'selffde',
- 'daechs',
- 'nass',
- 'negrij',
- 'purmerlust',
- 'uijr',
- 'overcomste',
- 'vaderlants',
- 'goas',
- 'ceulen',
- 'veroveren',
- 'jerusalem',
- 'defluijt',
- 'limburg',
- 'geseyde',
- 'hopvogel',
- 'rebecca',
- 'azia',
- 'chiampans',
- 'punct',
- 'veere',
- 'gaasperdam',
- 'uno',
- 'crap',
- 'lastdrager',
- 'sleewijk',
- 'verbrant',
- 'suijt',
- 'suijckeren',
- 'phenix',
- 'vicq',
- 'padtbrugge',
- 'lach',
- 'januario',
- 'aengelant',
- 'zuijderburg',
- 'medebrengende',
- 'geanckert',
- 'malcander',
- 'merckt',
- 'coomende',
- 'voorstaende',
- 'aes',
- 'maleijen',
- 'osacca',
- 'vreeland',
- 'leste',
- 'suijd',
- 'batavi',
- 'daghregister',
- 'partie',
- 'terdam',
- 'schoonderloo',
- 'cruijssen',
- 'maleije',
- 'calpentijn',
- 'vriesland',
- 'geus',
- 'renswoude',
- 'kerkwijk',
- 'westerdijxhorn',
- 'delfshaven',
- 'oostende',
- 'geroerde',
- 'vlagh',
- 'zeel',
- 'gissingh',
- 'geberchte',
- 'duijnenburg',
- 'sar',
- 'fluijtie',
- 'herstelder',
- 'duijven',
- 'schuijtwijk',
- 'thuys',
- 'aatchin',
- 'tcasteel',
- 'verongeluckte',
- 'vojagie',
- 'vrientschap',
- 'horstendaal',
- 'loenderveen',
- 'dordrecht',
- 'verseijlen',
- 'liggen',
- 'milde',
- 'madrast',
- 'aleppo',
- 'pantchiall',
- 'nieuwstad',
- 'barbara',
- 'meijenberg',
- 'dieshoek',
- 'carpentier',
- 'gevlucht',
- 'brack',
- 'weeck',
- 'schoonauwen',
- 'bombahia',
- 'macas',
- 'geertruijd',
- 'voorschoten',
- 'amadabath',
- 'mathijs',
- 'beeck',
- 'schellag',
- 'spoedichste',
- 'sparenrijk',
- 'graeff',
- 'jacatra',
- 'uijtgaen',
- 'voyagie',
- 'diemermeer',
- 'stieren',
- 'mourits',
- 'jorisz',
- 'gemaeckte',
- 'gestadich',
- 'aetchin',
- 'jonghste',
- 'schips',
- 'junius',
- 'crooswijk',
- 'andragirij',
- 'paauw',
- 'bellesoor',
- 'berkenroode',
- 'mijdregt',
- 'robijn',
- 'naede',
- 'deventer',
- 'sielen',
- 'kroonenburg',
- 'mondt',
- 'gheijn',
- 'ziam',
- 'hulst',
- 'palembangh',
- 'ael',
- 'verwachte',
- 'vegt',
- 'midts',
- 'alrede',
- 'superintendent',
- 'horssen',
- 'pampus',
- 'laer',
- 'zuyd',
- 'aengebrachte',
- 'caeb',
- 'hittoe',
- 'raecken',
- 'daman',
- 'prattenburg',
- 'frederick',
- 'vlotter',
- 'lichte',
- 'gecombineerd',
- 'landts',
- 'doradus',
- 'jamby',
- 'vroech',
- 'putmans',
- 'bril',
- 'maetsuijcker',
- 'maccao',
- 'delfland',
- 'kronenburg',
- 'bengaele',
- 'makassar',
- 'salanghoor',
- 'proostwijk',
- 'rescontre',
- 'perde',
- 'rosairo',
- 'tydinge',
- 'gemerct',
- 'ijsselmonde',
- 'giroffel',
- 'kiefhoek',
- 'eend',
- 'portugiesen',
- 'joncquen',
- 'tijdelijk',
- 'velzen',
- 'duijvenvoorde',
- 'belois',
- 'vervolch',
- 'gerescontreert',
- 'lieffde',
- 'tulpenburg',
- 'wart',
- 'gracht',
- 'admiraals',
- 'poedecherij',
- 'rotter',
- 'scheijbeek',
- 'aengeb',
- 'lacca',
- 'quelangh',
- 'veldhoen',
- 'gesocht',
- 'arriv',
- 'alblasserdam',
- 'meijnde',
- 'stolle',
- 'maeckten',
- 'ginck',
- 'geluckigh',
- 'dinsdagh',
- 'vlieger',
- 'tijger',
- 'xula',
- 'haij',
- 'naegelen',
- 'haring',
- 'hoochste',
- 'brenght',
- 'veerman',
- 'swaen',
- 'swol',
- 'diana',
- 'bentvelt',
- 'laus',
- 'bogaert',
- ...]</pre>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>ende | naer | oock | noch | int | nae | schepen | retour | vant | camer | gecomen | fluijt | volck | becomen | welck | jacht | hoorn | japan | rotterdam | coninck | ditto | jagt | wint | compe | godt | lant | eijlanden | derwaerts | end | vertreck | landt | goa | geladen | stadt | tschip | bat | comende | maent | opt | chaloup | maecken | ladinge | japara | delft | oocq | gearriveert | genaemt | gemaeckt | weijnich | coningh | rhede | langh | waermede | daermede | ene | macht | ancker | originele | jnt | eijlant | nassauw | augustij | vrede | quartieren | wapen | voijagie | cattij | middagh | achter | opde | vaderlant | portugees | geseijde | leeuw | dirck | cargasoen | verwachten | mauritius | rijck | chialoep | dach | namentlijck | eijlandt | geladene | vlissingen | jachten | battavia | gelyck | seecker | wingurla | gescheept | amst | portugesen | iapan | comste | stondt | nederlants | arent | nacht | vercocht
+</pre>
 </div>
 </div>
 </div>
@@ -2558,7 +1578,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
