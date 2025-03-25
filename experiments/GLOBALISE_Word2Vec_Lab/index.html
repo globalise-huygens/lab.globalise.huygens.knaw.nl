@@ -1312,9 +1312,50 @@ Note: download and unzip the <code>GLOBALISE.word2vec.zip</code> file in a <code
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">gensim</span> <span class="o">-</span><span class="n">U</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">gensim</span><span class="o">==</span><span class="mf">4.3.3</span> <span class="o">-</span><span class="n">U</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">! pip install gensim -U</div>
+<div class="clipboard-copy-txt" id="cell-2">! pip install gensim==4.3.3 -U</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Something recently changed in Google Colab, so if you're running the notebook there, also execute the cell below. This will interrupt the session and restart a new one, with the correct packages installed. Please note that you will get a message that "Your session crashed for an unknown reason", which can be ignored.</p>
+<p>Alternatively, click 'Runtime' in the top menu, then 'Restart session' and continue the rest of the notebook.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Colab only</span>
+<span class="n">exit</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-3"># Colab only
+exit()</div>
 </div>
 </div>
 </div>
@@ -1340,7 +1381,7 @@ Note: download and unzip the <code>GLOBALISE.word2vec.zip</code> file in a <code
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1361,7 +1402,7 @@ Note: download and unzip the <code>GLOBALISE.word2vec.zip</code> file in a <code
 
 <span class="n">w2v</span> <span class="o">=</span> <span class="n">KeyedVectors</span><span class="o">.</span><span class="n">load_word2vec_format</span><span class="p">(</span><span class="sa">f</span><span class="s2">"data/GLOBALISE_</span><span class="si">{</span><span class="n">vector_size</span><span class="si">}</span><span class="s2">.word2vec"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">import os
+<div class="clipboard-copy-txt" id="cell-4">import os
 import sys
 import logging
 import pickle
@@ -1397,7 +1438,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1410,7 +1451,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"pantchialang"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">for i in w2v.most_similar("pantchialang", topn=100):
+<div class="clipboard-copy-txt" id="cell-5">for i in w2v.most_similar("pantchialang", topn=100):
     print(i[0], end=" | ")</div>
 </div>
 </div>
@@ -1438,7 +1479,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1451,7 +1492,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"intje"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">for i in w2v.most_similar("intje", topn=100):
+<div class="clipboard-copy-txt" id="cell-6">for i in w2v.most_similar("intje", topn=100):
     print(i[0], end=" | ")</div>
 </div>
 </div>
@@ -1479,7 +1520,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1492,7 +1533,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">w2v</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s2">"caneel"</span><span class="p">,</span> <span class="n">topn</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">for i in w2v.most_similar("caneel", topn=100):
+<div class="clipboard-copy-txt" id="cell-7">for i in w2v.most_similar("caneel", topn=100):
     print(i[0], end=" | ")</div>
 </div>
 </div>
@@ -1531,7 +1572,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1545,7 +1586,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
     <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mf">0.4</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">for i, p in w2v.most_similar("amsterdam", topn=100):
+<div class="clipboard-copy-txt" id="cell-8">for i, p in w2v.most_similar("amsterdam", topn=100):
     if p &gt;= 0.4:
         print(i, end=" | ")</div>
 </div>
@@ -1585,7 +1626,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1600,7 +1641,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">" | "</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">for i in w2v.most_similar(
+<div class="clipboard-copy-txt" id="cell-9">for i in w2v.most_similar(
     positive=["weder", "weer", "regen"], negative=["wederom", "alweder"], topn=100
 ):
     print(i[0], end=" | ")</div>
@@ -1641,7 +1682,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1657,7 +1698,7 @@ w2v = KeyedVectors.load_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec"
 
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">words = w2v.closer_than("eendracht", "tilburg")
+<div class="clipboard-copy-txt" id="cell-10">words = w2v.closer_than("eendracht", "tilburg")
 
 output = " | ".join(words[:100])
 
@@ -1700,7 +1741,7 @@ print(output)</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1716,7 +1757,7 @@ print(output)</div>
 <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">similarity</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2"> (similarity: </span><span class="si">{</span><span class="n">similarity</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10">results = w2v.most_similar(positive=["noten", "ceylon"], negative=["banda"], topn=10)
+<div class="clipboard-copy-txt" id="cell-11">results = w2v.most_similar(positive=["noten", "ceylon"], negative=["banda"], topn=10)
 
 print("'noten' is to 'banda' as the following are to 'ceylon':")
 for word, similarity in results:
@@ -1770,7 +1811,7 @@ cardaman (similarity: 0.5378)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1806,7 +1847,7 @@ cardaman (similarity: 0.5378)
 <span class="c1"># Setting</span>
 <span class="n">vector_size</span> <span class="o">=</span> <span class="mi">100</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">import os
+<div class="clipboard-copy-txt" id="cell-12">import os
 import sys
 import logging
 import pickle
@@ -1860,7 +1901,7 @@ vector_size = 100</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1872,7 +1913,7 @@ vector_size = 100</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">data</span> <span class="o">&amp;&amp;</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">datasets</span><span class="o">.</span><span class="n">iisg</span><span class="o">.</span><span class="n">amsterdam</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">access</span><span class="o">/</span><span class="n">datafile</span><span class="o">/</span><span class="mi">33172</span><span class="err">?</span><span class="n">gbrecs</span><span class="o">=</span><span class="n">true</span> <span class="o">-</span><span class="n">O</span> <span class="n">data</span><span class="o">/</span><span class="n">globalise_transcriptions_v2_txt</span><span class="o">.</span><span class="n">tab</span> <span class="o">--</span><span class="n">content</span><span class="o">-</span><span class="n">disposition</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">! mkdir -p data &amp;&amp; wget https://datasets.iisg.amsterdam/api/access/datafile/33172?gbrecs=true -O data/globalise_transcriptions_v2_txt.tab --content-disposition</div>
+<div class="clipboard-copy-txt" id="cell-13">! mkdir -p data &amp;&amp; wget https://datasets.iisg.amsterdam/api/access/datafile/33172?gbrecs=true -O data/globalise_transcriptions_v2_txt.tab --content-disposition</div>
 </div>
 </div>
 </div>
@@ -1887,7 +1928,7 @@ vector_size = 100</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1899,7 +1940,7 @@ vector_size = 100</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="err">!</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">data</span><span class="o">/</span><span class="n">txt</span> <span class="o">&amp;&amp;</span> <span class="n">wget</span> <span class="o">-</span><span class="n">i</span> <span class="n">data</span><span class="o">/</span><span class="n">globalise_transcriptions_v2_txt</span><span class="o">.</span><span class="n">tab</span> <span class="o">-</span><span class="n">P</span> <span class="n">data</span><span class="o">/</span><span class="n">txt</span><span class="o">/</span> <span class="o">--</span><span class="n">content</span><span class="o">-</span><span class="n">disposition</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">! mkdir -p data/txt &amp;&amp; wget -i data/globalise_transcriptions_v2_txt.tab -P data/txt/ --content-disposition</div>
+<div class="clipboard-copy-txt" id="cell-14">! mkdir -p data/txt &amp;&amp; wget -i data/globalise_transcriptions_v2_txt.tab -P data/txt/ --content-disposition</div>
 </div>
 </div>
 </div>
@@ -1940,7 +1981,7 @@ vector_size = 100</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -1970,7 +2011,7 @@ vector_size = 100</div>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
         <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14">def preprocess_txt(file_path):
+<div class="clipboard-copy-txt" id="cell-15">def preprocess_txt(file_path):
     print("Processing", file_path)
 
     # Open the textfile
@@ -2003,7 +2044,7 @@ vector_size = 100</div>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2019,7 +2060,7 @@ vector_size = 100</div>
     <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">FOLDER</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
     <span class="n">preprocess_txt</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15">FOLDER = "data/txt"
+<div class="clipboard-copy-txt" id="cell-16">FOLDER = "data/txt"
 
 for f in os.listdir(FOLDER):
     filepath = os.path.join(FOLDER, f)
@@ -2049,7 +2090,7 @@ for f in os.listdir(FOLDER):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2153,7 +2194,7 @@ for f in os.listdir(FOLDER):
                 <span class="s2">"No input document stream provided; assuming dictionary will be initialized some other way."</span>
             <span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16">logger = logging.getLogger(__name__)
+<div class="clipboard-copy-txt" id="cell-17">logger = logging.getLogger(__name__)
 
 
 class CustomTextDirectoryCorpus(TextDirectoryCorpus):
@@ -2260,7 +2301,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2287,7 +2328,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">result</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-17">class SentencesIterator:
+<div class="clipboard-copy-txt" id="cell-18">class SentencesIterator:
     def __init__(self, generator_function):
         self.generator_function = generator_function
         self.generator = self.generator_function()
@@ -2328,7 +2369,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2340,7 +2381,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">corpus</span> <span class="o">=</span> <span class="n">CustomTextDirectoryCorpus</span><span class="p">(</span><span class="n">FOLDER</span><span class="p">,</span> <span class="n">dictionary_prune_at</span><span class="o">=</span><span class="mi">20_000_000</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-18">corpus = CustomTextDirectoryCorpus(FOLDER, dictionary_prune_at=20_000_000)</div>
+<div class="clipboard-copy-txt" id="cell-19">corpus = CustomTextDirectoryCorpus(FOLDER, dictionary_prune_at=20_000_000)</div>
 </div>
 </div>
 </div>
@@ -2366,7 +2407,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2379,7 +2420,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data/corpus.pkl"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-19">with open("data/corpus.pkl", "wb") as f:
+<div class="clipboard-copy-txt" id="cell-20">with open("data/corpus.pkl", "wb") as f:
     pickle.dump(corpus, f)</div>
 </div>
 </div>
@@ -2395,7 +2436,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2408,7 +2449,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># with open("data/corpus.pkl", "rb") as f:</span>
 <span class="c1">#     corpus = pickle.load(f)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-20"># with open("data/corpus.pkl", "rb") as f:
+<div class="clipboard-copy-txt" id="cell-21"># with open("data/corpus.pkl", "rb") as f:
 #     corpus = pickle.load(f)</div>
 </div>
 </div>
@@ -2435,7 +2476,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-22">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2447,7 +2488,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">texts</span> <span class="o">=</span> <span class="n">SentencesIterator</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">get_texts</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-21">texts = SentencesIterator(corpus.get_texts)</div>
+<div class="clipboard-copy-txt" id="cell-22">texts = SentencesIterator(corpus.get_texts)</div>
 </div>
 </div>
 </div>
@@ -2474,7 +2515,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-22">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-23">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2489,7 +2530,7 @@ class CustomTextDirectoryCorpus(TextDirectoryCorpus):
     <span class="n">texts</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="n">vector_size</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="n">workers</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span>
 <span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-22">workers = effective_n_jobs(max(os.cpu_count() - 1, 1))
+<div class="clipboard-copy-txt" id="cell-23">workers = effective_n_jobs(max(os.cpu_count() - 1, 1))
 w2v = Word2Vec(
     texts, vector_size=vector_size, window=5, min_count=5, workers=workers, epochs=5
 )</div>
@@ -2518,7 +2559,7 @@ w2v = Word2Vec(
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-23">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-24">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -2530,7 +2571,7 @@ w2v = Word2Vec(
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">save_word2vec_format</span><span class="p">(</span><span class="sa">f</span><span class="s2">"data/GLOBALISE_</span><span class="si">{</span><span class="n">vector_size</span><span class="si">}</span><span class="s2">.word2vec"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-23">w2v.wv.save_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec")</div>
+<div class="clipboard-copy-txt" id="cell-24">w2v.wv.save_word2vec_format(f"data/GLOBALISE_{vector_size}.word2vec")</div>
 </div>
 </div>
 </div>
@@ -2564,7 +2605,7 @@ w2v = Word2Vec(
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 15:33:19">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2025 09:44:49">March 25, 2025</span>
   </span>
 
     
